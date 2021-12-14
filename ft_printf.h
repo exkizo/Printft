@@ -22,6 +22,9 @@ int printc(va_list args);
 int prints(va_list args);
 int printd(va_list args);
 int printu(va_list args);
-int ft_printchar (const char c);
+int printx(va_list args);
+int printxx(va_list args);
+int printpsign (void);
+int ft_printchar(const char c);
 
 #endif

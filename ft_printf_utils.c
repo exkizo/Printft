@@ -19,6 +19,8 @@ void init_array (int (**f)(va_list args))
     f['d'] = printd;
     f['i'] = printd;
     f['u'] = printu;
+    f['x'] = printx;
+    f['X'] = printxx;
 }
 
 int printd(va_list args)
@@ -77,7 +79,30 @@ int printc(va_list args)
     return (1);
 }
 
-int ft_printchar (const char c)
+int printx(va_list args)
+{
+    unsigned int num = va_arg(args, unsigned int);
+    int len = 0;
+    len = ft_putnbr_base(num, "0123456789abcdef");
+    return (len);
+}
+
+int printxx(va_list args)
+{
+    unsigned int num = va_arg(args, unsigned int);
+    int len = 0;
+    len = ft_putnbr_base(num, "0123456789ABCDEF");
+    return (len);
+}
+
+int printpsign (void)
+{
+    int c = '%';
+    write(1, &c, 1);
+    return (1);
+}
+
+int ft_printchar(const char c)
 {
     write(1, &c, 1);
     return (1);

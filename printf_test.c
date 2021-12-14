@@ -3,6 +3,6 @@
 int main ()
 {
 	unsigned int ui = 300;
-	printf("%u", ui);
+	printf("%X", ui);
 	return (0);
 }

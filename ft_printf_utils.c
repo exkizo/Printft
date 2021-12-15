@@ -21,6 +21,7 @@ void init_array (int (**f)(va_list args))
     f['u'] = printu;
     f['x'] = printx;
     f['X'] = printxx;
+    f['p'] = printp;
 }
 
 int printd(va_list args)
@@ -91,15 +92,26 @@ int printxx(va_list args)
 {
     unsigned int num = va_arg(args, unsigned int);
     int len = 0;
-    len = ft_putnbr_base(num, "0123456789ABCDEF");
+    ft_putnbr_base(num, "0123456789ABCDEF");
+    len = hex_len_ui(num);
     return (len);
 }
 
-int printpsign (void)
+int printsign (void)
 {
     int c = '%';
     write(1, &c, 1);
     return (1);
+}
+
+int printp(va_list args)
+{
+    unsigned long long num = va_arg(args, unsigned long long);
+    int len = hex_len(num) + 2;
+
+    write(1, "x0", 2);
+    put_hex(num);
+    return(len);
 }
 
 int ft_printchar(const char c)

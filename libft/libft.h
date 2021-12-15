@@ -29,6 +29,8 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 void	*ft_calloc(size_t num, size_t size);
 size_t	ft_strlen(const char *str);
+int 	hex_len(unsigned long long nbr);
+int 	hex_len_ui(unsigned int nbr);
 void	*ft_memset(void *dest, int val, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -67,5 +69,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 int		ft_putnbr_base(unsigned int nbr, char *base);
+void 	put_hex(unsigned long long nbr);
 
 #endif

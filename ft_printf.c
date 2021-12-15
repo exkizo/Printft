@@ -15,7 +15,7 @@ int ft_printf(const char *str, ...)
         if (str[i] == '%')
         {
             if (str[i + 1] == '%')
-                len += printpsign();
+                len += printsign();
             else
                 len += (*f[str[i + 1]]) (args);
             i++;
@@ -31,8 +31,9 @@ int ft_printf(const char *str, ...)
 int main()
 {
     int len;
+    void *c = "hello";
 
-    len = ft_printf(" %s %c %d %i %u %x %X %%", "hello", 48, -1200, -300, 1000, 300, 300);
+    len = ft_printf(" %X", 200);
     printf("%d", len);
     return(0);
 }

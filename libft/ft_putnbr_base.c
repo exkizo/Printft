@@ -67,6 +67,7 @@ int	ft_putnbr_base(unsigned int nbr, char *base)
 		{
 			ft_putnbr_base(nbr / lenbase, base);
 			ft_putnbr_base(nbr % lenbase, base);
+			i++;
 		}
 		else
 		{

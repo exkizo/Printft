@@ -84,7 +84,8 @@ int printx(va_list args)
 {
     unsigned int num = va_arg(args, unsigned int);
     int len = 0;
-    len = ft_putnbr_base(num, "0123456789abcdef");
+    ft_putnbr_base(num, "0123456789abcdef");
+    len = hex_len_ui(num);
     return (len);
 }
 

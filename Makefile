@@ -38,11 +38,12 @@ OBJS = $(SRCS:.c=.o)
 
 D_OBJS = *.o
 
-$(NAME): $(OBJS)
+$(NAME): 
+		$(OBJS)
 		$(MAKE) -C $(LIBPATH)
 		cp $(LIBFT) $(NAME)
 		$(CC) $(FLAGS) $(INCLUDES) $(SRC)
-		$(AR) $(NAME) $(OBJS)
+		$(AR) $(NAME) $(D_OBJS)
 
 all: $(NAME)
 

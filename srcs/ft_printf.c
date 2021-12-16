@@ -6,12 +6,19 @@
 /*   By: jocorrei <jocorrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 15:53:32 by jocorrei          #+#    #+#             */
-/*   Updated: 2021/12/15 15:58:40 by jocorrei         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:24:25 by jocorrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
+
+int ctoi(char c)
+{
+	int i;
+	i = c;
+	
+	return (i);
+}
 
 int	ft_printf(const char *str, ...)
 {
@@ -31,7 +38,7 @@ int	ft_printf(const char *str, ...)
 			if (str[i + 1] == '%')
 				len += printsign();
 			else
-				len += (*f[str[i + 1]])(args);
+				len += (*f[ctoi(str[i + 1])])(args);
 			i++;
 		}
 		else

@@ -16,5 +16,5 @@
 
 <div>
 	<h1 align = "center"> About the project </h1>
-	<p align = "center">The goal of this project is to code a simple version of the well known printf function from the `<stdio.h>` library<p>
+	<p align = "center">The goal of this project is to code a simple version of the well known printf function<p>
 </div>

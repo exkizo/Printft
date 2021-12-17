@@ -16,5 +16,5 @@
 
 <div>
 	<h1 align = "center"> About the project </h1>
-	<p align = "right">The goal of this project is to code a simple version of the well knowm C prinf function<p>
+	<p align = "left">The goal of this project is to code a simple version of the well knowm printf function from <stdio.h> <p>
 </div>

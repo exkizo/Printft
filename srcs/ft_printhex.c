@@ -13,54 +13,64 @@
 #include "../includes/ft_printf.h"
 #include "../libft/libft.h"
 
-int printx(va_list args)
+int	printx(va_list args)
 {
-    unsigned int num = va_arg(args, unsigned int);
-    int len = 0;
-    ft_putnbr_base(num, "0123456789abcdef");
-    if(num == 0)
-        return(1);
-    len = hex_len_ui(num);
-    return (len);
+	unsigned int	num;
+	int				len;
+
+	len = 0;
+	num = va_arg(args, unsigned int);
+	ft_putnbr_base(num, "0123456789abcdef");
+	if (num == 0)
+		return (1);
+	len = hex_len_ui(num);
+	return (len);
 }
 
-int printxx(va_list args)
+int	printxx(va_list args)
 {
-    unsigned int num = va_arg(args, unsigned int);
-    int len = 0;
-    ft_putnbr_base(num, "0123456789ABCDEF");
-    if (num == 0)
-        return(1);
-    len = hex_len_ui(num);
-    return (len);
+	unsigned int	num;
+	int				len;
+
+	len = 0;
+	num = va_arg(args, unsigned int);
+	ft_putnbr_base(num, "0123456789ABCDEF");
+	if (num == 0)
+		return (1);
+	len = hex_len_ui(num);
+	return (len);
 }
 
-int printp(va_list args)
+int	printp(va_list args)
 {
-    unsigned long long num = va_arg(args, unsigned long long);
-    int len = hex_len(num) + 2;
+	unsigned long long	num;
+	int					len;
 
-    write(1, "0x", 2);
-    put_hex(num);
-    if(num == 0)
-        return(3);
-    return(len);
+	num = va_arg(args, unsigned long long);
+	len = hex_len(num) + 2;
+	write(1, "0x", 2);
+	put_hex(num);
+	if (num == 0)
+		return (3);
+	return (len);
 }
 
-int prints(va_list args)
+int	prints(va_list args)
 {
-    char *s = va_arg(args, char *);
-    int i = 0;
-    if (s == NULL)
-    {
-        write(1, "(null)", 6);
-        return(6);
+	char	*s;
+	int		i;
 
-    }
-    while (*s)
-    {
-        write(1, s++, 1);
-        i++;
-    }
-    return (i);
+	*s = va_arg(args, char *);
+	i = 0;
+	if (s == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (*s)
+	{
+		write(1, s++, 1);
+		i++;
+	}
+	return (i);
 }

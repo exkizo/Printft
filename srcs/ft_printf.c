@@ -6,17 +6,17 @@
 /*   By: jocorrei <jocorrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 15:53:32 by jocorrei          #+#    #+#             */
-/*   Updated: 2021/12/15 20:24:25 by jocorrei         ###   ########.fr       */
+/*   Updated: 2021/12/17 16:34:53 by jocorrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int ctoi(char c)
+int	ctoi(char c)
 {
-	int i;
+	int	i;
+
 	i = c;
-	
 	return (i);
 }
 

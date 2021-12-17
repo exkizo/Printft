@@ -11,15 +11,17 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int hex_len(unsigned long long nbr)
+int	hex_len(unsigned long long nbr)
 {
-  int len = 0;
-  if (nbr == 1)
-    return (1);
-  while (nbr)
-  {
-    nbr /= 16;
-    len++;
-  }
-  return (len);
+	int	len;
+
+	len = 0;
+	if (nbr == 1)
+		return (1);
+	while (nbr)
+	{
+		nbr /= 16;
+		len++;
+	}
+	return (len);
 }

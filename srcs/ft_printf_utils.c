@@ -12,56 +12,62 @@
 #include "../includes/ft_printf.h"
 #include "../libft/libft.h"
 
-int printd(va_list args)
+int	printd(va_list args)
 {
-    char *numstr;
-    int i = 0;
-    int num = va_arg(args, int);
+	char	*numstr;
+	int		i;
+	int		num;
 
-    numstr = ft_itoa(num);
-    while (numstr[i] != '\0')
-    {
-        write(1, &numstr[i], 1);
-        i++;
-    }
-    free(numstr);
-    return (i);
+	i = 0;
+	num = va_arg(args, int);
+	numstr = ft_itoa(num);
+	while (numstr[i] != '\0')
+	{
+		write(1, &numstr[i], 1);
+		i++;
+	}
+	free(numstr);
+	return (i);
 }
 
-int printu(va_list args)
+int	printu(va_list args)
 {
-    char *numstr;
-    int i = 0;
-    unsigned int num = va_arg(args, unsigned int);
+	char			*numstr;
+	int				i;
+	unsigned int	num;
 
-    numstr = ft_utoa(num);
-    while (numstr[i] != '\0')
-    {
-        write(1, &numstr[i], 1);
-        i++;
-    }
-    free(numstr);
-    return (i);
-
+	num = va_arg(args, unsigned int);
+	i = 0;
+	numstr = ft_utoa(num);
+	while (numstr[i] != '\0')
+	{
+		write(1, &numstr[i], 1);
+		i++;
+	}
+	free(numstr);
+	return (i);
 }
 
-int printc(va_list args)
+int	printc(va_list args)
 {
-    int c = va_arg(args, int);
+	int	c;
 
-    write(1, &c, 1);
-    return (1);
+	c = va_arg(args, int);
+	write(1, &c, 1);
+	return (1);
 }
 
-int printsign (void)
+int	printsign(void)
 {
-    int c = '%';
-    write(1, &c, 1);
-    return (1);
+	int	c;
+
+	c = '%';
+	write(1, &c, 1);
+	return (1);
 }
 
-int ft_printchar(const char c)
+int	ft_printchar(const char c)
 {
-    write(1, &c, 1);
-    return (1);
+	write(1, &c, 1);
+	return (1);
 }

@@ -57,9 +57,9 @@ static int	check_base(char *base)
 int	ft_putnbr_base(unsigned int nbr, char *base)
 {
 	unsigned int	lenbase;
-	int i;
-	i = 0;
+	int				i;
 
+	i = 0;
 	lenbase = ft_strlen(base);
 	if (check_base(base))
 	{
@@ -77,4 +77,3 @@ int	ft_putnbr_base(unsigned int nbr, char *base)
 	}
 	return (i);
 }
-

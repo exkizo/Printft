@@ -1,4 +1,4 @@
-<div><h1 align="center">
+<h1 align="center">
 	✏️ ft_printf
 </h1>
 
@@ -12,6 +12,6 @@
 	<img alt="Code language count" src="https://img.shields.io/github/languages/count/exkizo/Printft?color=yellow" />
 	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/exkizo/Printft?color=blue" />
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/exkizo/Printft?color=green" />
-</p></div>
+</p>
 
-#About the project
+<h1 align = "center"> About the project </h1>

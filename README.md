@@ -14,4 +14,7 @@
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/exkizo/Printft?color=green" />
 </p>
 
-<h1 align = "center"> About the project </h1>
+<div>
+	<h1 align = "center"> About the project </h1>
+	<p align = "right">The goal of this project is to code a simple version of the well knowm C prinf function<p>
+</div>
